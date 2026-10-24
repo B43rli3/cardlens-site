@@ -21,7 +21,7 @@
     </header>
 
     <h1>Datenschutzerklärung</h1>
-    <p class="lead">Diese Erklärung gilt für die iOS-App CardLens. Stand: September 2026.</p>
+    <p class="lead">Diese Erklärung gilt für die iOS-App CardLens und für den Abruf dieser Support-Website. Stand: 24.&nbsp;Oktober 2026.</p>
 
     <h2>1. Verantwortlicher</h2>
     <p>Verantwortlich für die Datenverarbeitung im Sinne der Datenschutz-Grundverordnung (DSGVO) ist:</p>
@@ -34,66 +34,89 @@
     <p>Kontakt: <a href="mailto:support.cardlens@gmail.com">support.cardlens@gmail.com</a></p>
 
     <h2>2. Überblick</h2>
-    <p>CardLens ist eine lokale iOS-App zum Scannen und Verwalten von Pokémon-Sammelkarten. Es werden keine Benutzerkonten angelegt und keine personenbezogenen Profile in einer Cloud gespeichert. Sämtliche Sammlungs-, Deck- und Wunschlistendaten verbleiben auf deinem Gerät.</p>
+    <p>CardLens ist eine lokale iOS-App zum Scannen und Verwalten von Pokémon-Sammelkarten. Es werden keine Benutzerkonten angelegt und keine personenbezogenen Profile in einer eigenen Cloud gespeichert. Sammlungs-, Deck- und Wunschlistendaten verbleiben auf deinem Gerät, soweit in dieser Erklärung nichts anderes steht.</p>
 
     <h2>3. Kameranutzung</h2>
-    <p>Für den Kartenscan wird die Gerätekamera verwendet. Das aufgenommene Bild wird lokal auf deinem iPhone verarbeitet, um Kartentext zu erkennen und die Karte im Bild zu finden. Kamerabilder werden nicht an unsere Server oder Drittanbieter zur dauerhaften Speicherung übermittelt.</p>
+    <p>Für den Kartenscan wird die Gerätekamera verwendet. Das aufgenommene Bild wird lokal auf deinem iPhone verarbeitet, um Kartentext zu erkennen und die Karte im Bild zu finden. Kamerabilder werden nicht an unsere Server oder an Drittanbieter hochgeladen.</p>
 
     <h2>4. Texterkennung (OCR) und Bildanalyse</h2>
-    <p>Zur Erkennung von Kartenname, Nummer und Set werden Apple-Vision-Frameworks auf dem Gerät eingesetzt (Texterkennung, Rechteck-Erkennung, Bildvergleich). Die Analyse erfolgt vollständig lokal. Es wird kein separates Cloud-KI-Modell und kein Training mit deinen Fotos durch uns betrieben.</p>
+    <p>Zur Erkennung von Kartenname, Nummer und Set werden Apple-Vision-Frameworks auf dem Gerät eingesetzt (Texterkennung, Rechteck-Erkennung, Bildvergleich). Diese Bildanalyse erfolgt auf dem Gerät. Es wird kein separates Cloud-KI-Modell genutzt und kein Training mit deinen Fotos durch uns betrieben.</p>
+    <p>Die Karte wird danach über die erkannten Textangaben zugeordnet. Dafür können Kartenname, Sammlernummer, Set-Hinweis oder weitere Suchmerkmale an TCGdex gesendet werden. Das aufgenommene Kamerabild wird für diese Abfrage nicht hochgeladen. Öffentliche Kartenbilder können anschließend von TCGdex geladen und auf dem Gerät mit dem Foto verglichen werden.</p>
 
-    <h2>5. Internetzugriffe</h2>
-    <p>Bei Bedarf stellt die App Verbindungen zu folgenden Diensten her:</p>
-    <ul>
-      <li>TCGdex (api.tcgdex.net, assets.tcgdex.net) – Karten- und Setinformationen</li>
-      <li>Cardmarket – Preisdaten und Kauflinks (du verlässt die App beim Öffnen)</li>
-      <li>Öffentliche Kartenscan-Bilder zur visuellen Zuordnung</li>
-    </ul>
-    <p>Dabei werden technische Anfragedaten (z. B. IP-Adresse, abgerufene Karten-ID) von den jeweiligen Serverbetreibern verarbeitet. Wir übermitteln keine Kontodaten, da CardLens keine Anmeldung vorsieht.</p>
+    <h2>5. Internetzugriffe der App</h2>
+    <p>Wenn du eine Funktion nutzt, die aktuelle Kartendaten braucht, stellt die App Verbindungen zu TCGdex her. CardLens hat keine eigene Cardmarket-Schnittstelle.</p>
+
+    <h3>TCGdex</h3>
+    <p>Genutzt werden <code>api.tcgdex.net</code> und <code>assets.tcgdex.net</code>. Darüber lädt die App Kartensuche, Setinformationen, öffentliche Kartenbilder, Preisangaben und bei einem Export die dafür nötigen Kartendaten.</p>
+    <p>Übertragen werden die für die Abfrage nötigen Angaben, zum Beispiel ein Suchbegriff, eine Karten-ID, eine Set-Angabe, eine Sammlernummer oder ein Filter wie Kategorie oder Seltenheit. Es wird kein Benutzerkonto und kein Kamerabild mitgeschickt. Bei jeder Verbindung können technische Verbindungsdaten anfallen, insbesondere die IP-Adresse und Angaben, die das System in einer normalen Anfrage mitschickt.</p>
+    <p>Die Datenschutzerklärung von TCGdex beschreibt vor allem die Website tcgdex.net: <a href="https://www.tcgdex.net/privacy-policy">https://www.tcgdex.net/privacy-policy</a>. Sie sagt, dass für die Website keine personenbezogenen Nutzerdaten und nur nicht personenbezogene Analysedaten verarbeitet werden. Sie legt nicht eindeutig fest, wie lange technische Zugriffsdaten der API oder des Bildservers aufbewahrt werden. Wir behaupten deshalb nicht, dass solche Anfragen garantiert ungespeichert bleiben, und auch nicht, dass daraus ein persönlicher Suchverlauf entsteht.</p>
+
+    <h3>Cardmarket</h3>
+    <p>Die in der App gezeigten Preisfelder stammen aus der Antwort von TCGdex. CardLens ruft keine Cardmarket-API auf. Erst wenn du einen Kauflink öffnest, verlässt du die App. Danach gelten die Datenschutzbestimmungen von Cardmarket. Der Link enthält die Produktangabe oder den Suchbegriff der Karte und die Sprache, keine Nutzerkennung.</p>
+
+    <h3>Öffentliche Kartenbilder</h3>
+    <p>Kartenbilder und Set-Grafiken werden von TCGdex geladen. Dabei können dieselben technischen Verbindungsdaten anfallen wie bei anderen Abrufen. Wir legen nicht fest und wissen nicht abschließend, ob der Betreiber diese Abrufe speichert.</p>
 
     <h2>6. Fotomediathek</h2>
-    <p>Optional kannst du ein eigenes Bild als Cover für Decks, Wunschlisten oder Sammlungen auswählen. Dafür wird nur das von dir ausgewählte Foto gelesen; ein Zugriff auf die gesamte Mediathek ist nicht erforderlich.</p>
+    <p>Optional kannst du ein eigenes Bild als Cover für Decks, Wunschlisten oder Sammlungen auswählen. Dafür wird nur das von dir ausgewählte Foto gelesen; ein Zugriff auf die gesamte Mediathek ist nicht erforderlich. Das Bild wird lokal in der App gespeichert und nicht an TCGdex oder Cardmarket gesendet.</p>
 
     <h2>7. Lokale Speicherung</h2>
-    <p>Folgende Daten werden ausschließlich lokal auf deinem Gerät gespeichert:</p>
+    <p>Folgende Daten werden auf deinem Gerät gespeichert:</p>
     <ul>
-      <li>Decks und Deckkarten (inkl. optionales Cover)</li>
+      <li>Decks und Deckkarten, einschließlich eines optionalen Covers</li>
       <li>Wunschlisten, optionales Cover und Preisalarme (Wants)</li>
       <li>Collections: Sammlungen, Erweiterungsfortschritt und optionales Cover</li>
       <li>Scan-Verlauf und zwischengespeicherte Kartenvorschaubilder</li>
       <li>App-Einstellungen</li>
-      <li>Beginn und Stand der Testphase (Keychain auf diesem Gerät)</li>
     </ul>
-    <p>Beim Deinstallieren der App werden Sammlungsdaten gelöscht. Der Testphasenbeginn kann auf dem Gerät erhalten bleiben, damit die Testwoche nicht durch Neuinstallation verlängert wird.</p>
+    <p>CardLens speichert den Beginn der Testphase nicht in der Keychain und nicht als eigenen Fristenzähler ab dem ersten App-Start.</p>
+    <p>Beim Deinstallieren der App werden die im App-Container gespeicherten Daten grundsätzlich entfernt. Eine vorhandene iOS-Gerätesicherung, zum Beispiel über iCloud, kann davon getrennt weiterbestehen. Ob die kostenlose Testphase schon genutzt wurde und ob die App dauerhaft freigeschaltet ist, verwaltet Apple über den Kauf. Eine Neuinstallation startet deshalb nicht automatisch eine neue Testphase.</p>
 
-    <h2>8. Benachrichtigungen</h2>
-    <p>Optional kannst du Preisalarme aktivieren. Dafür fragt iOS die Berechtigung für Mitteilungen ab. Die Hinweise erscheinen als lokale Systembenachrichtigungen auf dem Gerät. CardLens betreibt keinen eigenen Push-Server und übermittelt dafür keine Nutzerkonten.</p>
+    <h2>8. Benachrichtigungen und Preisalarme</h2>
+    <p>Optional kannst du Preisalarme aktivieren. Dafür fragt iOS die Berechtigung für Mitteilungen ab. Die Hinweise erscheinen als lokale Systembenachrichtigungen auf dem Gerät. CardLens betreibt keinen eigenen Push-Server und erzeugt dafür kein Geräte-Push-Token.</p>
+    <p>Zielpreis und Kartenauswahl bleiben auf dem Gerät. Um zu prüfen, ob der Preis erreicht ist, überträgt die App die Karten-ID an TCGdex und erhält den Preis zurück. Diese Prüfung erfolgt, wenn du die App oder die betreffende Wunschliste nutzt. iOS kann die Prüfung zusätzlich in einem späteren Hintergrundfenster ausführen. Das ist keine durchgehende Überwachung und kein eigener Server, der dich benachrichtigt.</p>
 
     <h2>9. Testphase und In-App-Kauf</h2>
-    <p>CardLens kann kostenlos geladen werden. Nach dem ersten Start steht die App sieben Tage uneingeschränkt zur Verfügung. Danach ist ein einmaliger In-App-Kauf über Apple StoreKit erforderlich. Es handelt sich nicht um ein Abonnement.</p>
-    <p>Die Zahlung und Kaufabwicklung erfolgen ausschließlich durch Apple. Wir erhalten keine vollständigen Zahlungsdaten wie Kreditkartennummern. Zur Prüfung der Freischaltung fragt die App bei Apple den Kaufstatus deines Apple-Accounts ab.</p>
-    <p>Der Beginn der Testphase wird lokal in der Keychain dieses Geräts gespeichert.</p>
+    <p>CardLens kann kostenlos geladen werden. Die siebentägige Testphase startet nicht schon dadurch, dass du die App das erste Mal öffnest. Sie beginnt mit einem einmaligen kostenlosen In-App-Kauf, sobald Apple die Transaktion verifiziert hat, und endet sieben Tage nach diesem Kaufdatum.</p>
+    <p>Die Testphase verlängert sich nicht von selbst. Nach dem Ende wird nichts automatisch abgebucht. Wenn du die App danach weiter nutzen willst, kannst du sie mit einem separaten einmaligen Kauf dauerhaft freischalten. Das ist kein Abonnement.</p>
+    <p>Den Preis zeigt Apple in der Kaufabwicklung an. Die Zahlungsdaten verarbeitet Apple. CardLens erhält keine vollständigen Kreditkarten- oder Bankdaten. Ob die Testphase oder die dauerhafte Freischaltung gilt, prüft die App über StoreKit bei Apple. Eine vorhandene Freischaltung kannst du über „Käufe wiederherstellen“ erneut laden. Die Kaufberechtigung bleibt bei deinem Apple-Account und wird durch das Löschen der App nicht entfernt.</p>
 
-    <h2>10. Keine Benutzerkonten</h2>
-    <p>CardLens bietet derzeit keine Registrierung oder Anmeldung. Es werden keine E-Mail-Adressen, Passwörter oder Nutzerprofile durch uns erhoben oder gespeichert.</p>
+    <h2>10. Keine Benutzerkonten und Support</h2>
+    <p>CardLens bietet keine Registrierung und keine Anmeldung. Wir legen keine Nutzerprofile an und verlangen kein Passwort.</p>
+    <p>Wenn du uns freiwillig eine E-Mail an <a href="mailto:support.cardlens@gmail.com">support.cardlens@gmail.com</a> sendest, verarbeiten wir die Absenderadresse und den Inhalt der Nachricht, um die Anfrage zu beantworten. Die App kann in den E-Mail-Entwurf die App-Version und die iOS-Version einsetzen. Gesendet wird die Nachricht erst, wenn du sie in deiner Mail-App abschickst. Eine feste Löschfrist für diese Nachrichten ist nicht festgelegt. Sie bleiben gespeichert, solange das für die Bearbeitung der Anfrage nötig ist. Ob darüber hinaus eine gesetzliche Aufbewahrung gilt, ist im Einzelfall zu prüfen.</p>
 
-    <h2>11. Keine Cloud-Synchronisation</h2>
-    <p>Deine Sammlungs- und Deckdaten werden nicht in einer von uns betriebenen Cloud synchronisiert. Eine Sicherung erfolgt nur, sofern du die iOS-Gerätesicherung (iCloud oder lokal) aktivierst.</p>
+    <h2>11. Keine eigene Cloud, Backups und Käufe</h2>
+    <p>CardLens synchronisiert Sammlungs- und Deckdaten nicht in eine von uns betriebene Cloud. Auf externen Systemen können trotzdem Informationen liegen: Apple kann App-Daten in eine von dir aktivierte Gerätesicherung aufnehmen, und Apple speichert die Kaufberechtigungen zu deinem Apple-Account. Technische Zugriffsdaten können außerdem bei TCGdex und beim Hoster dieser Website anfallen.</p>
 
     <h2>12. Analytics, Tracking und Werbung</h2>
-    <p>CardLens verwendet derzeit keine Analyse- oder Tracking-SDKs (z. B. Firebase Analytics, Adjust), kein verhaltensbasiertes Profiling und keine Werbenetzwerke. Wir verkaufen keine personenbezogenen Daten.</p>
+    <p>In der App sind keine eigenen Analyse-, Werbe- oder Tracking-SDKs eingebunden, zum Beispiel kein Firebase Analytics und kein Adjust. Wir erstellen daraus kein verhaltensbasiertes Profil und verkaufen keine personenbezogenen Daten.</p>
+    <p>Das sagt nichts darüber, ob ein externer API- oder Hosting-Anbieter eigene Protokolle oder Auswertungen führt. Für die TCGdex-Website ist eine Analyse mit Plausible beschrieben. Für die API und den Bildserver ist das in der verlinkten Erklärung nicht eindeutig geregelt.</p>
 
     <h2>13. Rechtsgrundlagen</h2>
-    <p>Die Verarbeitung erfolgt zur Bereitstellung der App-Funktionen (Art. 6 Abs. 1 lit. b DSGVO) sowie auf Grundlage deiner Einwilligung bei optionalen Berechtigungen (z. B. Kamera, Fotos, Benachrichtigungen; Art. 6 Abs. 1 lit. a DSGVO).</p>
+    <p>Die folgenden Zuordnungen geben wieder, welche Grundlage nach dem derzeitigen technischen Stand in Betracht kommt. Sie sollten juristisch bestätigt werden.</p>
+    <ul>
+      <li>Bereitstellung der Funktionen, die du in der App aufrufst, einschließlich der lokalen Speicherung und der dafür nötigen Kartenabfrage bei TCGdex: Art.&nbsp;6 Abs.&nbsp;1 lit.&nbsp;b DSGVO.</li>
+      <li>Technische Verbindungsdaten, soweit sie für diese Abfrage oder für den Betrieb dieser Website anfallen und nicht schon von lit.&nbsp;b erfasst sind: Art.&nbsp;6 Abs.&nbsp;1 lit.&nbsp;f DSGVO, das berechtigte Interesse an einem funktionsfähigen und sicheren Abruf.</li>
+      <li>Optionale Kamera, Fotoauswahl und Mitteilungen: Die iOS-Abfrage erlaubt nur den Systemzugriff. Sie ist für sich genommen keine Einwilligung nach der DSGVO. Soweit du die Funktion selbst startest, kommt Art.&nbsp;6 Abs.&nbsp;1 lit.&nbsp;b DSGVO in Betracht. Ob dafür zusätzlich eine Einwilligung nötig ist, ist juristisch zu bestätigen.</li>
+      <li>Support-E-Mails, die du freiwillig sendest: Art.&nbsp;6 Abs.&nbsp;1 lit.&nbsp;b oder lit.&nbsp;f DSGVO, um die Anfrage zu beantworten.</li>
+      <li>Kaufstatus: Apple verarbeitet die Zahlungsdaten. CardLens erhält über StoreKit den für die Freischaltung nötigen Status. Dafür kommt Art.&nbsp;6 Abs.&nbsp;1 lit.&nbsp;b DSGVO in Betracht.</li>
+    </ul>
+    <p>Eine gesonderte Einwilligung holen wir in der App derzeit nicht ein.</p>
 
     <h2>14. Deine Rechte</h2>
-    <p>Du hast das Recht auf Auskunft, Berichtigung, Löschung, Einschränkung der Verarbeitung, Datenübertragbarkeit und Widerspruch (Art. 15–21 DSGVO) sowie das Recht, dich bei einer Aufsichtsbehörde zu beschweren. Da Daten primär lokal gespeichert werden, kannst du sie durch Löschen in der App oder Deinstallation entfernen.</p>
+    <p>Du hast das Recht auf Auskunft, Berichtigung, Löschung, Einschränkung der Verarbeitung, Datenübertragbarkeit und Widerspruch (Art.&nbsp;15–21 DSGVO) sowie das Recht, dich bei einer Aufsichtsbehörde zu beschweren.</p>
+    <p>Daten, die nur in der App liegen, kannst du dort löschen oder durch Deinstallation des App-Containers entfernen. Eine Apple-Kauftransaktion wird dadurch nicht gelöscht. Ob und wie lange ein externer Dienst eigene Serverprotokolle behält, bestimmt dieser Dienst, nicht die Löschfunktion der App.</p>
+    <p>Datenschutzfragen kannst du an <a href="mailto:support.cardlens@gmail.com">support.cardlens@gmail.com</a> richten. Für einen Verantwortlichen in Sachsen ist die zuständige Aufsichtsbehörde nach derzeitigem Stand die Sächsische Datenschutz- und Transparenzbeauftragte, Devrientstraße&nbsp;5, 01067&nbsp;Dresden, <a href="https://www.saechsdsb.de/">www.saechsdsb.de</a>. Ist die Tätigkeit anders organisiert, kann eine andere Behörde zuständig sein.</p>
 
     <h2>15. Änderungen</h2>
-    <p>Diese Datenschutzerklärung kann bei neuen Funktionen angepasst werden. Wesentliche Änderungen werden in der App kenntlich gemacht.</p>
+    <p>Diese Datenschutzerklärung kann bei neuen Funktionen angepasst werden. Die Fassung vom 24.&nbsp;Oktober 2026 ersetzt die Erklärung vom September 2026, insbesondere die Angaben zur Testphase. Wesentliche Änderungen werden auf dieser Seite veröffentlicht.</p>
 
-    <h2>16. Stand</h2>
-    <p>Diese Datenschutzerklärung gilt für CardLens. Stand: September 2026.</p>
+    <h2>16. Diese Website</h2>
+    <p>Diese Support-Seiten werden mit GitHub Pages bereitgestellt. Beim Abruf können technische Verbindungsdaten, insbesondere die IP-Adresse, durch GitHub verarbeitet werden. Einzelheiten stehen in der Datenschutzerklärung von GitHub: <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">GitHub General Privacy Statement</a>. Eine Speicherfrist dafür legen wir nicht fest und geben sie nicht als eigene Zusage an.</p>
+    <p>Der Besuch dieser Website ist von der Verarbeitung in der iOS-App getrennt. Die App überträgt deine Sammlungen nicht an diese Website.</p>
+
+    <h2>17. Stand</h2>
+    <p>Diese Datenschutzerklärung gilt für CardLens. Stand: 24.&nbsp;Oktober 2026.</p>
 
     <footer>
       <p><a href="index.html">Zurück zum Support</a></p>
